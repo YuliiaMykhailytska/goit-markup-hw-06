@@ -759,6 +759,7 @@ button {
   color: var(--head-logo-color);
 }
 .modal-form-input-wrapper {
+  display: block;
   position: relative;
 }
 .input-icon {
@@ -767,6 +768,11 @@ button {
   left: 12px;
   transform: translateY(-50%);
 }
+/* .input-icon:focus,
+.modal-form-input:focus {
+  outline: none;
+  border-color: var(--logo-color);
+} */
 .modal-form-label-textarea {
 }
 .privacy-policy-container {
