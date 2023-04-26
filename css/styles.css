@@ -682,11 +682,11 @@ button {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.backdrop.is-hidden {
+/* .backdrop.is-hidden {
   opacity: 0;
   pointer-events: none;
   visibility: hidden;
-}
+} */
 .modal {
   position: absolute;
   top: 50%;
@@ -725,6 +725,62 @@ button {
 .close-modal-button:focus {
   background-color: var(--menu-link-color);
   fill: var(--main-color);
+}
+/* modal form */
+
+.modal-form {
+  display: flex;
+  flex-direction: column;
+}
+.modal-title {
+  width: 100%;
+  margin-top: 48px;
+  margin-bottom: 16px;
+  text-align: center;
+}
+.modal-form-lable {
+  margin-bottom: 8px;
+}
+.modal-form-input-desc {
+  display: block;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.16;
+  letter-spacing: 0.04em;
+  color: var(--border-customers-color);
+  margin-bottom: 4px;
+}
+.modal-form-input {
+  width: 100%;
+  height: 40px;
+  border: 1px solid var(--logo-color);
+  border-radius: 4px;
+  padding-left: 38px;
+  color: var(--head-logo-color);
+}
+.modal-form-input-wrapper {
+  position: relative;
+}
+.input-icon {
+  position: absolute;
+  top: 50%;
+  left: 12px;
+  transform: translateY(-50%);
+}
+.modal-form-label-textarea {
+}
+.privacy-policy-container {
+  border: none;
+}
+.privacy-policy-checkbox {
+}
+.privacy-policy-desc {
+}
+.privacy-policy-link {
+}
+.send-btn-wrapper {
+}
+.send-btn {
 }
 
 /* =========OVERLAY PORT=========== */
