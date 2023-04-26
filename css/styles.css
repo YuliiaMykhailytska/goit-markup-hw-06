@@ -512,7 +512,7 @@ button {
   max-width: 264px;
 }
 
-.footer-social-media {
+.footer-social-media-description {
   font-weight: 500;
   font-size: 16px;
   line-height: 1.5;
@@ -555,6 +555,11 @@ button {
 .footer-social-media-svg {
   fill: var(--footer-logo-color);
 }
+
+.noname {
+  margin-right: 80px;
+}
+
 /* =====================/FOOTER===================== */
 /* /MAIN page*/
 
