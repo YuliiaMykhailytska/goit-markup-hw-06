@@ -753,10 +753,10 @@ button {
 .modal-form-input {
   width: 100%;
   height: 40px;
-  border: 1px solid var(--logo-color);
+  border: 1px solid #2e2f42;
   border-radius: 4px;
   padding-left: 38px;
-  color: var(--head-logo-color);
+  opacity: 0.2;
 }
 .modal-form-input-wrapper {
   display: block;
@@ -768,13 +768,16 @@ button {
   left: 12px;
   transform: translateY(-50%);
 }
-/* .input-icon:focus,
+
 .modal-form-input:focus {
-  outline: none;
-  border-color: var(--logo-color);
-} */
-.modal-form-label-textarea {
+  opacity: 1;
+  outline-color: var(--logo-color);
 }
+
+.modal-form-input:focus + .input-icon {
+  fill: var(--logo-color);
+}
+
 .privacy-policy-container {
   border: none;
 }
