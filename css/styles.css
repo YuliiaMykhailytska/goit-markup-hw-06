@@ -682,11 +682,11 @@ button {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* .backdrop.is-hidden {
+.backdrop.is-hidden {
   opacity: 0;
   pointer-events: none;
   visibility: hidden;
-} */
+}
 .modal {
   position: absolute;
   top: 50%;
@@ -757,6 +757,7 @@ button {
   border-radius: 4px;
   padding-left: 38px;
   opacity: 0.2;
+  transition: outline-color var(--transition-duration-function);
 }
 .modal-form-input-wrapper {
   display: block;
@@ -767,6 +768,7 @@ button {
   top: 50%;
   left: 12px;
   transform: translateY(-50%);
+  transition: fill var(--transition-duration-function);
 }
 
 .modal-form-input:focus {
@@ -781,15 +783,105 @@ button {
 .privacy-policy-container {
   border: none;
 }
+.modal-form-textarea {
+  width: 100%;
+  height: 120px;
+  padding: 8px 16px;
+  margin-bottom: 16px;
+  resize: none;
+  opacity: 0.2;
+  border-radius: 4px;
+  transition: outline-color var(--transition-duration-function);
+}
+.modal-form-textarea:focus {
+  opacity: 1;
+  outline-color: var(--logo-color);
+}
+
+.modal-form-textarea::placeholder {
+  font-family: var(--font-family-roboto);
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.16;
+  letter-spacing: 0.04em;
+  color: rgba(46, 47, 66, 0.4);
+}
+
+.privacy-policy-container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.modal-form-privacy-policy-text {
+  font-family: var(--font-family-roboto);
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.16;
+  letter-spacing: 0.04em;
+  color: var(--border-customers-color);
+}
+.privacy-policy-icon {
+  margin-right: 8px;
+}
 .privacy-policy-checkbox {
+  appearance: none;
 }
-.privacy-policy-desc {
+.privacy-policy-unchecked {
+  opacity: 1;
+  transition: opacity var(--transition-duration-function);
 }
+
+input[type="checkbox"]:checked
+  + .privacy-policy-icon
+  > .privacy-policy-unchecked {
+  opacity: 0;
+}
+
+.privacy-policy-checked {
+  opacity: 0;
+  transition: opacity var(--transition-duration-function);
+}
+input[type="checkbox"]:checked
+  + .privacy-policy-icon
+  > .privacy-policy-checked {
+  opacity: 1;
+}
+
 .privacy-policy-link {
+  color: var(--logo-color);
 }
-.send-btn-wrapper {
+
+.modal-send-btn {
+  font-family: var(--font-family-roboto);
+  background-color: var(--logo-color);
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  color: var(--main-color);
+  background-color: var(--logo-color);
+
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  display: block;
+  min-width: 169px;
+  height: 56px;
+  border: none;
+  border-radius: 4px;
+  margin: auto;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+
+  transition-property: bacground-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
-.send-btn {
+
+.modal-send-btn:hover,
+.modal-send-btn:focus {
+  background-color: var(--menu-link-color);
 }
 
 /* =========OVERLAY PORT=========== */

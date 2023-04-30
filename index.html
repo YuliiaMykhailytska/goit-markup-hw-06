@@ -628,17 +628,18 @@
           </ul>
         </div>
 
-        <!-- subscribe-container?????????????????????????? -->
-
         <div class="container">
-          <!-- <p class="!!!!!!!!??????">Subscribe</p> -->
-
           <form name="subscribe_form" autocomplete="on" novalidate>
             <label>
               <input type="email" name="E-mail" />
             </label>
 
-            <button type="submit">Submit</button>
+            <button type="submit">
+              Submit
+              <svg class="icon-send" width="24" height="24">
+                <use href="./images/send.svg#icon-send"></use>
+              </svg>
+            </button>
           </form>
         </div>
       </div>
@@ -721,18 +722,32 @@
           </label>
 
           <!-- checkbox -->
-          <fieldset class="privacy-policy-container">
-            <input class="privacy-policy-checkbox" type="checkbox" />
-            <p class="privacy-policy-desc">
+          <label class="privacy-policy-container">
+            <input
+              class="privacy-policy-checkbox"
+              type="checkbox"
+              name="user_privacy_policy"
+            />
+            <svg class="privacy-policy-icon" width="18" height="18">
+              <use
+                class="privacy-policy-unchecked"
+                href="./images/icon.svg#icon-unchecked"
+              ></use>
+              <use
+                class="privacy-policy-checked"
+                href="./images/icon.svg#icon-checked"
+              ></use>
+            </svg>
+
+            <span class="modal-form-privacy-policy-text">
               I accept the terms and conditions of the
               <a class="privacy-policy-link" href="">Privacy Policy</a>
-            </p>
-          </fieldset>
+            </span>
+          </label>
 
           <!-- btn -->
-          <div class="send-btn-wrapper">
-            <button class="send-btn" type="submit">Send</button>
-          </div>
+
+          <button class="modal-send-btn" type="submit">Send</button>
         </form>
       </div>
     </div>
