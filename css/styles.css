@@ -509,7 +509,7 @@ button {
   letter-spacing: 0.02em;
   color: var(--footer-logo-color);
 
-  max-width: 264px;
+  max-width: 100%;
 }
 
 .footer-social-media-description {
@@ -556,8 +556,82 @@ button {
   fill: var(--footer-logo-color);
 }
 
+/* не можу логічне імя селектору footer-social-media-desc, все зникає */
 .noname {
   margin-right: 80px;
+}
+
+.subscribe-desc {
+  font-family: var(--font-family-roboto);
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: var(--main-color);
+  margin-bottom: 16px;
+}
+/* input + btn */
+.subscribe-container {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+/* input */
+.subscribe-input {
+  background-color: var(--head-logo-color);
+  width: 264px;
+  height: 40px;
+  outline: 1px solid var(--main-color);
+  border: none;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  border-radius: 4px;
+}
+
+.subscribe-input::placeholder {
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.04em;
+
+  font-family: var(--font-family-roboto);
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 2;
+  letter-spacing: 0.04em;
+
+  color: var(--main-color);
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 16px;
+}
+
+.subscribe-text {
+  font-family: var(--font-family-roboto);
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.04em;
+  color: var(--main-color);
+}
+/* btn */
+.subscribe-btn {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 8px 24px;
+  gap: 16px;
+  background-color: var(--logo-color);
+  border-radius: 4px;
+  border-color: transparent;
+  transition: background-color var(--transition-duration-function);
+}
+
+.subscribe-btn:hover,
+.subscribe-btn:focus {
+  background-color: var(--menu-link-color);
 }
 
 /* =====================/FOOTER===================== */
